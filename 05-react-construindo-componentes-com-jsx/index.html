@@ -49,12 +49,12 @@
       function CampoDeDigitacao({ label, type, placeholder, value, setValor }) {
         return (
           <div className="form__campo-digitacao">
-            <label for="email">{label}</label>
+            <label for={type}>{label}</label>
             <input
               type={type}
               placeholder={placeholder}
               required
-              id="email"
+              id={type}
               value={value}
               onChange={(evento) => setValor(evento.target.value)}
             />
@@ -74,11 +74,15 @@
         const [email, setEmail] = React.useState("");
         const [senha, setSenha] = React.useState("");
 
+        const handleSubmit = (event) => {
+          event.preventDefault();
+        };
+
         return (
           <div className="container-login">
             <img src="./img/imagem-login.png" alt="Imagem de uma mulher" />
             <section>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <Titulo>Login</Titulo>
                 <Subtitulo>Boas-vindas! Faça seu login.</Subtitulo>
                 <CampoDeDigitacao
