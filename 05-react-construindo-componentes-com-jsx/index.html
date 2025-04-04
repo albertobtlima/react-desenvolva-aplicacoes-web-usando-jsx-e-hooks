@@ -90,7 +90,7 @@
         return (
           <li>
             <a href="{link}">
-              <img src="{`./img/${nome}.svg`}" alt={`ícone do ${nome}`} />
+              <img src={`./img/${nome}.svg`} alt={`ícone do ${nome}`} />
               {nome}
             </a>
           </li>
@@ -116,6 +116,7 @@
         return (
           <div className="container-login">
             <img src="./img/imagem-login.png" alt="Imagem de uma mulher" />
+
             <section>
               <form onSubmit={handleSubmit}>
                 <Titulo>Login</Titulo>
@@ -134,6 +135,7 @@
                   value={senha}
                   setValor={setSenha}
                 />
+
                 <fieldset className="form__opcoes">
                   <Checkbox />
                   <p>
@@ -142,8 +144,29 @@
                     </a>
                   </p>
                 </fieldset>
+
                 <Botao>Login</Botao>
               </form>
+
+              <div className="container-links">
+                <Texto classe="container-links__titulo">
+                  ou entre com outras contas
+                </Texto>
+                <ul>
+                  <ItemRedesSociais
+                    link="https://www.github.com"
+                    nome="Github"
+                  />
+                  <ItemRedesSociais
+                    link="https://www.google.com"
+                    nome="Google"
+                  />
+                </ul>
+                <Texto classe="container-links__texto">
+                  Ainda não tem conta?
+                </Texto>
+                <Link>Crie seu cadastro!</Link>
+              </div>
             </section>
           </div>
         );
