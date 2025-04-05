@@ -4,7 +4,6 @@ import Share from "./assets/share.svg";
 import Chat from "./assets/chat.svg";
 
 export default function Card({
-  id,
   imagemUrl,
   titulo,
   resumo,
