@@ -28,3 +28,6 @@ Lista de Cursos:
 ### Node.js e terminal: dominando o ambiente de desenvolvimento front-end
 
 ### React: configurando e estruturando projetos com Vite
+
+[Projeto CodeConect](https://codeconnect-p0iwu2zxk-alberto-limas-projects.vercel.app/)
+
